@@ -14,7 +14,7 @@
 
     <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md border-t-4 border-red-600">
         <h2 class="text-2xl font-bold mb-2 text-gray-800">API Validator</h2>
-        <p class="text-sm text-gray-500 mb-6">Test your endpoint against the One Eleven validation server.</p>
+        <p class="text-sm text-gray-500 mb-6">Testing endpoint against the One Eleven validation server.</p>
         
         <form id="validatorForm" class="space-y-4">
             <div>
@@ -27,7 +27,7 @@
                 <label class="block text-sm font-semibold text-gray-700">Your API Endpoint URL</label>
                 <input type="url" id="apiUrl" required placeholder="https://your-app.onrender.com/webhook"
                     class="mt-1 block w-full border border-gray-300 rounded-md p-2.5 shadow-sm focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none">
-                <p class="text-xs text-gray-400 mt-1 italic">Note: Remember to include /webhook at the end.</p>
+                <p class="text-xs text-gray-400 mt-1 italic">Note: Remember to include webhook at the end.</p>
             </div>
 
             <button type="submit" id="submitBtn"
@@ -67,7 +67,7 @@
             badge.textContent = "Pending";
             badge.className = "text-[10px] px-2 py-0.5 rounded-full font-bold uppercase bg-yellow-100 text-yellow-700";
 
-            // Construct validation URL based on task requirements 
+            // Construct validation URL based on task 
             const validationUrl = `https://yhxzjyykdsfkdrmdxgho.supabase.co/functions/v1/application-task?url=${encodeURIComponent(url)}&email=${encodeURIComponent(email)}`;
 
             try {
